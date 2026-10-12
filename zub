@@ -1,0 +1,315 @@
+
+export default {
+  async fetch(request, env, ctx) {
+    const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the KFC USA menu with category guides, typical prices, calories, meal combinations, sides, drinks, and nutrition tips.">
+  <title>KFC Menu With Prices, Calories, and Meal Options</title>
+  <style>
+    :root {
+      --ink: #252525;
+      --muted: #5e6268;
+      --accent: #c8102e;
+      --accent-dark: #990c22;
+      --paper: #ffffff;
+      --page: #f5f6f8;
+      --line: #e4e6ea;
+      --soft: #fff4f5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .container {
+      width: min(100% - 32px, 960px);
+      margin: 38px auto;
+      padding: clamp(22px, 5vw, 64px);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 12px 40px rgba(25, 30, 40, 0.06);
+    }
+
+    section {
+      margin: 0 0 42px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    .intro {
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      color: #1f2023;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 0 0 24px;
+      font-size: clamp(2.1rem, 5vw, 3.6rem);
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      padding-left: 15px;
+      border-left: 4px solid var(--accent);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.15rem;
+    }
+
+    p {
+      margin: 0 0 18px;
+      color: #393d43;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .lead {
+      color: #30343a;
+      font-size: 1.12rem;
+      line-height: 1.85;
+    }
+
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: var(--accent-dark);
+    }
+
+    .conclusion {
+      padding: 26px;
+      background: var(--soft);
+      border: 1px solid #f2d8de;
+      border-radius: 12px;
+    }
+
+    .conclusion h2 {
+      border-left-color: var(--accent-dark);
+    }
+
+    .disclaimer {
+      padding-top: 16px;
+      border-top: 1px solid #edcbd2;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+        line-height: 1.75;
+      }
+
+      .container {
+        width: 100%;
+        margin: 0;
+        padding: 24px 20px;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      section {
+        margin-bottom: 34px;
+      }
+
+      .conclusion {
+        padding: 20px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        font-size: 11pt;
+      }
+
+      .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+      }
+
+      .conclusion {
+        background: #fff;
+        border: 1px solid #ddd;
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">KFC Menu Guide</span>
+      <h1>KFC Menu With Prices, Calories, and Meal Options</h1>
+      <p class="lead">Welcome to this guide to the <a href="https://kfmenu.us/">KFC menu</a>. If you are planning a quick lunch, a family dinner, or a meal with friends, reviewing menu categories before ordering can make the process easier. This guide explains the kinds of food commonly listed on the KFC USA menu, how to compare meal combinations, and what to consider when checking prices and nutrition information.</p>
+      <p>KFC is widely associated with seasoned fried chicken, but its menu includes more than individual pieces of chicken. Depending on the restaurant, customers may find tenders, nuggets, sandwiches, bowls, pot pies, combo meals, family buckets, sides, sauces, desserts, and drinks. Products and offers can vary by location and may change, so use this page as a general guide and confirm details with the restaurant you plan to visit.</p>
+    </section>
+
+    <section>
+      <h2>Understanding the KFC USA Menu</h2>
+      <p>Kentucky Fried Chicken, commonly called KFC, serves a range of chicken-based meals and accompanying items. The menu is organised into categories so customers can compare similar products more easily. Someone who wants a traditional chicken meal may begin with bone-in chicken, while another person may prefer a sandwich, tenders, or a bowl. Family meals and buckets are intended for larger orders, while sides, sauces, and drinks allow customers to complete or customise a meal.</p>
+      <p>Menu listings can include a product name, description, serving size, price, calorie information, and details about included items. Read the full description rather than relying on the name alone. A combo may include a main item, a side, a biscuit, and a drink, while another offer may contain only the main item and one accompaniment. These differences affect both the final cost and the amount of food in the order.</p>
+      <p>KFMenu.us is a menu-information resource focused on KFC locations in the United States. Its pages organise menu items by category and provide typical price and calorie references where information is available. The site describes its price approach as sampling KFC's public ordering system across a group of US restaurants and using the median as a typical reference. A median is useful for comparison, but it is not a promise that every restaurant will charge the same amount.</p>
+    </section>
+
+    <section>
+      <h2>KFC Fried Chicken</h2>
+      <p>Fried chicken is the signature category associated with KFC. Depending on local availability, the menu may offer individual pieces such as wings, drumsticks, thighs, and breasts, as well as larger orders for sharing. Customers can compare portion size, style, and the number of pieces when choosing between individual items and a bucket. Original Recipe and Extra Crispy are familiar KFC styles, while selected restaurants may also list spicy or limited-time variations.</p>
+      <p>Individual pieces can work as a snack, as part of a small meal, or as an addition to other menu items. A bucket is often more practical when several people are eating together, but it is important to check exactly what is included. Some offers contain chicken only, whereas a meal may add sides, biscuits, or drinks. Do not assume that every bucket includes extras simply because another bucket or combo does.</p>
+      <p>When comparing chicken options, check the piece count and the types of pieces included. People in the same group may prefer different cuts, so a variety option can be useful when available. Preparation style, serving size, and accompanying items can also change the calorie range. If you are comparing prices, consider the cost per person and whether the order includes the sides your group actually wants.</p>
+    </section>
+
+    <section>
+      <h2>Tenders and Nuggets</h2>
+      <p>Chicken tenders and nuggets provide alternatives to bone-in chicken. Tenders are longer pieces with a crisp coating, while nuggets are smaller, bite-sized portions. These options can suit quick lunches, casual dinners, or shared orders. The menu may offer several piece counts, allowing customers to select a portion based on appetite, budget, or whether the chicken will be the main part of the meal.</p>
+      <p>Tenders may be sold on their own or as part of a combo. Combos can include a side, a drink, or other accompaniments, but the exact contents depend on the named offer. Nuggets are often paired with dipping sauces, which can add sweet, smoky, tangy, or spicy flavours. Sauce selection, piece count, and availability should be checked on the current menu because offerings can change by restaurant or promotion.</p>
+      <p>For a useful comparison, look at serving size, the number of pieces, price, and what comes with the order. Calorie figures for the chicken alone may not represent the whole meal if you add sauces, fries, a biscuit, or a sweetened drink. When nutrition matters, review the information for each selected item and combine the figures for the complete order instead of treating one component as the total.</p>
+    </section>
+
+    <section>
+      <h2>Sandwiches and Wraps</h2>
+      <p>KFC sandwiches offer a handheld choice for customers who prefer a meal that is easy to eat on the go. A chicken sandwich generally combines a chicken fillet with a bun, sauce, and toppings. Some menus or locations may offer wrap-style products as well. Ingredients, preparation, and serving sizes vary by item, so read the description to understand what is included before placing an order.</p>
+      <p>One important detail is whether the displayed price applies to the sandwich alone or to a combo. A combo may add a side and beverage, which can be convenient if you want a complete meal. However, a standalone sandwich may be more suitable if you already have a drink or do not want additional sides. Compare the final cost of the combination you intend to buy rather than assuming that every bundle is automatically better value.</p>
+      <p>Nutrition can also differ considerably between sandwiches and their combos. Sauces, toppings, sides, and drinks contribute to the overall total. If you have an allergy or dietary restriction, consult the latest official ingredient and allergen information and ask the restaurant if any details are unclear. A general menu description is helpful for browsing, but it should not replace current restaurant guidance for specific dietary needs.</p>
+    </section>
+
+    <section>
+      <h2>Bowls and Pot Pies</h2>
+      <p>Bowls and pot pies provide alternatives to chicken pieces and handheld sandwiches. A bowl brings several ingredients together in one serving and is typically eaten with a fork or spoon. A pot pie offers a savoury filling beneath a crust. Availability can vary, and not every location will carry every product throughout the year.</p>
+      <p>These products may contain several components, so nutrition information should be reviewed for the complete item. Looking at only one ingredient will not provide an accurate picture of the whole meal. Serving sizes, preparation methods, and additional sides can affect the final calorie total.</p>
+      <p>If you are interested in a particular bowl or pot pie, check the selected restaurant's current ordering page before making plans. A menu guide can help you discover product names and typical prices, but the restaurant listing is the better source for confirming current availability.</p>
+    </section>
+
+    <section>
+      <h2>Combos and Value Meals</h2>
+      <p>Combo meals bring several menu items together in one order. Depending on the product, a combo may include chicken, tenders, a sandwich, a side, a biscuit, a drink, or dipping sauces. The contents are not identical across every combo, which makes reading the product description an important part of ordering.</p>
+      <p>Value meals and box combinations can make meal planning simpler by presenting a set of items for one advertised price. Smaller boxes may suit an individual lunch, while larger meals can provide more food. Whether a value meal is the best choice depends on the items included and your personal preferences.</p>
+      <p>Before selecting a combo, compare its contents with the standalone items you would otherwise purchase. Consider whether you need a drink, an additional side, or extra chicken. A low advertised price may not represent the lowest final cost if you need to add several items separately.</p>
+      <p>Promotions may have specific terms, limited availability, or ordering-channel restrictions. Always confirm the offer details and final checkout total before completing your order.</p>
+    </section>
+
+    <section>
+      <h2>Family Meals and Buckets</h2>
+      <p>Family meals and buckets are designed for sharing. They can provide several pieces of chicken or a mix of chicken products. Some meals include sides, biscuits, or other extras, while other buckets may focus on chicken alone. Review the complete description to understand the number of pieces, the types of chicken, the size of included sides, and whether drinks are part of the package.</p>
+      <p>When ordering for a group, consider how many people will be eating and whether they have different preferences. Some diners may prefer drumsticks, while others may choose breasts or thighs. A variety bucket can be helpful if offered, but a group with varied tastes may prefer a combination of a bucket and individual items. Thinking about portion sizes before ordering can help you avoid buying too much or too little food.</p>
+      <p>Sides are another part of planning a shared meal. Consider how many people want mashed potatoes, gravy, coleslaw, fries, biscuits, or other available choices. A large order can look like a better deal, but the useful comparison is the food your group will actually eat and the final price. Menu prices and meal contents can vary between restaurants, so confirm the local listing before checking out.</p>
+    </section>
+
+    <section>
+      <h2>Kids Meals</h2>
+      <p>Kids meals offer smaller portions for younger diners. Depending on the location and current menu, they may combine a selected main item with one or more accompaniments. Available choices, portions, and included extras can vary, so parents and caregivers should review the product description. Comparing serving size and price can help families choose an option that matches a child's appetite without ordering unnecessary items.</p>
+      <p>If a child has an allergy or dietary restriction, use the latest official KFC allergen information and contact the restaurant before ordering. Ingredients and preparation practices can change, and shared kitchen equipment may create cross-contact risks. Do not rely on a short menu description as a guarantee that a product is suitable for a specific allergy. Ask the restaurant for clarification whenever the published information does not answer your question.</p>
+    </section>
+
+    <section>
+      <h2>Sides, Biscuits, Sauces, Desserts, and Drinks</h2>
+      <p>Side dishes add variety to a chicken meal. Depending on the restaurant, choices may include mashed potatoes, gravy, macaroni and cheese, coleslaw, corn, fries, or other items. Biscuits may be included with selected meals or sold separately. Serving sizes and availability differ between locations, so check the current menu before planning an order around a particular side.</p>
+      <p>Sauces and condiments let customers change the flavour of tenders, nuggets, and chicken. Choices can vary, and some sauces may be sold as individual add-ons. Sauces can also contribute to the price and nutritional content of an order. If you are comparing two meals, include the cost and nutrition of any dips or extras you plan to add rather than counting only the main item.</p>
+      <p>Desserts offer a sweet finish, while drinks may be included with some combos or purchased separately. Beverage sizes and choices vary by restaurant. Check whether a meal already includes a drink before adding another one, and account for the extra cost if it does not. Limited-time products and seasonal offers may appear or disappear, so current local listings are more dependable than an undated menu screenshot.</p>
+    </section>
+
+    <section>
+      <h2>KFC Menu Prices: How to Read Them</h2>
+      <p>KFC menu prices can differ between restaurants because of local pricing decisions, operating costs, promotions, and ordering channels. A menu guide may show a typical price to help with budgeting, but that figure should not be treated as a guaranteed price at every branch. Delivery orders may also have different charges from orders placed directly with a restaurant.</p>
+      <p>KFMenu.us explains that its typical price references are based on publicly available KFC ordering information sampled across US restaurants. It uses the median price to represent a middle value across its sample. This can make comparison more useful than relying on a single unusually high or low price, but it still represents a sample rather than a quote for every restaurant. Check the date of an update and verify the price for your selected location.</p>
+      <p>For accurate budgeting, select the restaurant you intend to use and review the current order total. Remember that taxes, delivery charges, service fees, and optional extras can affect the final amount. If you are comparing a family bucket with several individual meals, compare the same number of diners and similar quantities of food. This gives you a more realistic view of the cost and helps you choose the option that best fits your needs.</p>
+    </section>
+
+    <section>
+      <h2>Calories and Nutrition Information</h2>
+      <p>Nutrition information can help customers understand the contents of a meal. Calorie figures may be available for chicken pieces, tenders, sandwiches, sides, drinks, sauces, and other products. The total for a complete meal depends on the exact products and serving sizes selected. A combo containing chicken, a side, a biscuit, and a drink will have a different total from the chicken by itself.</p>
+      <p>When comparing calorie figures, check whether the published value applies to a single item, a range of portion options, or an entire combination. Sauces, substitutions, and additional sides can change the total. Where the source does not publish a value, treat the information as unavailable rather than assuming the item contributes zero calories. Use the most current official nutrition data when precision matters.</p>
+      <p>Allergen information requires particular care. A blank field or missing entry does not necessarily mean that an item is free from an allergen; it may mean the information is not available in that listing. For allergies or serious dietary restrictions, consult official KFC allergen information and contact the restaurant directly. Shared preparation areas may create cross-contact risks, and a third-party menu guide should not replace official advice.</p>
+    </section>
+
+    <section>
+      <h2>How to Choose a Meal for Your Budget</h2>
+      <p>Start by deciding what kind of meal you need and how many people you are feeding. A single item may be enough for a snack, while a combo may be more convenient for lunch or dinner. For groups, compare family meals and buckets with the cost of ordering individual items. Consider appetite and preferences as well as the advertised price.</p>
+      <p>Next, choose the main item and decide whether you need a side, biscuit, drink, or sauce. Compare the final cost of the combination rather than the headline price alone. If a promotion is available, read its terms and confirm that your selected restaurant accepts it. Before checking out, review the order summary so that you understand what is included and whether any fees or optional additions have changed the total.</p>
+      <p>For nutrition planning, review the information for the actual items in your order and add the components together. For allergy questions, prioritise current official information and direct confirmation from the restaurant. These steps make menu comparisons more practical without assuming that every location offers the same products, prices, or preparation details.</p>
+    </section>
+
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      <h3>What is included on the KFC USA menu?</h3>
+      <p>Common categories include fried chicken, tenders, nuggets, sandwiches, bowls, pot pies, combos, family meals, kids meals, sides, sauces, desserts, and drinks. The exact selection depends on the restaurant and current offers.</p>
+      <h3>Are KFC prices the same at every location?</h3>
+      <p>No. Prices and promotions may vary by restaurant and ordering channel. Treat typical prices as a reference and confirm the current price for the location where you plan to order.</p>
+      <h3>How can I estimate the calories in a complete meal?</h3>
+      <p>Review the nutrition information for each selected item, including sides, drinks, sauces, and extras. Use current official information when accurate nutrition details are important, and do not treat missing values as zero.</p>
+      <h3>Does every combo include a side and a drink?</h3>
+      <p>No. Combo contents differ by product. Read the exact description to confirm which items are included and whether substitutions or additional items cost extra.</p>
+      <h3>Where should I check allergen information?</h3>
+      <p>Consult the latest official KFC allergen information and contact the restaurant if you need clarification about ingredients or possible cross-contact.</p>
+    </section>
+
+    <section class="conclusion">
+      <h2>Explore the KFC Menu Online</h2>
+      <p>The KFC USA menu offers different choices for individual meals, family dinners, and shared orders. Understanding the differences between chicken pieces, tenders, sandwiches, bowls, combos, buckets, sides, sauces, and drinks can help you compare products and plan an order. Check serving sizes and included items, review current prices for your restaurant, and consider nutrition information when it is relevant to your needs.</p>
+      <p>Visit <a href="https://kfmenu.us/" target="_blank" rel="noopener noreferrer">KFMenu.us</a> to explore menu categories, read item descriptions, and review available typical price and nutrition references. Before ordering, confirm local availability, current prices, promotional terms, and allergen details with the selected KFC restaurant.</p>
+      <p class="disclaimer">Disclaimer: This page is an independent informational guide and is not an official KFC website. Menu items, prices, calorie figures, and availability may change. Verify current details with the restaurant before ordering.</p>
+    </section>
+  </main>
+</body>
+</html>`;
+
+    return new Response(html, {
+      headers: {
+        "content-type": "text/html;charset=UTF-8"
+      }
+    });
+  }
+};
